@@ -390,6 +390,9 @@
         if (option) return option;
         const label = typeof value === 'string' || typeof value === 'number'
           ? value : '';
+        if (label === '' && value.id) {
+					var label = value.id
+				}
         let newOption = {
           value: value,
           currentLabel: label
